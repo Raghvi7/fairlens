@@ -7,3 +7,4 @@ fairlearn==0.10.0
 plotly==5.18.0
 fpdf2==2.7.9
 scipy==1.12.0
+Pillow==10.2.0
