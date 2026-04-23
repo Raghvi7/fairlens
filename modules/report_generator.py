@@ -97,17 +97,9 @@ def generate_pdf_report(
     active_regs: List[str],
 ) -> bytes:
     """
-    Generate and return a PDF compliance report as bytes.
-    Uses reportlab if available, falls back to fpdf2.
+    Generate and return a PDF compliance report as bytes using fpdf2.
     """
-    try:
-        return _generate_with_reportlab(df, target_col, detection_results, fairness_results, smote_results, narratives, active_regs)
-    except ImportError:
-        pass
-    try:
-        return _generate_with_fpdf(df, target_col, detection_results, fairness_results, smote_results, narratives, active_regs)
-    except ImportError:
-        raise ImportError("Install reportlab or fpdf2 to generate PDF reports: pip install reportlab fpdf2")
+    return _generate_with_fpdf(df, target_col, detection_results, fairness_results, smote_results, narratives, active_regs)
 
 
 def _generate_with_fpdf(df, target_col, detection_results, fairness_results, smote_results, narratives, active_regs) -> bytes:

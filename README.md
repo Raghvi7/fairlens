@@ -1,10 +1,10 @@
-# ⚖️ FairLens — AI Bias Detection & Fairness Audit Platform
+FairLens — AI Bias Detection & Fairness Audit Platform
 
 A Streamlit dashboard that automatically detects bias in datasets, measures fairness metrics, rebalances with SMOTE, and generates regulatory compliance reports.
 
----
 
-## 🚀 Quick Start
+
+Quick Start
 
 ```bash
 # 1. Install dependencies
